@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>HR Portal</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>HR Portal</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="Jobs.html">Jobs</a></li>
+          <li><a href="Departments.html">Departments</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle active" data-toggle="dropdown" href="Team.html">Team</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown" data-toggle="dropdown"><a href="#"><span>Employees</span><i class="bi bi-chevron-right"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="Manage.html">Manage</a></li>
+                  <li><a href="Attendance.html">Attendance</a></li>
+                  <li><a href="Tasks.html">Tasks</a></li>
+                </ul>
+              </li>
+              <li><a href="Salaries.html">Salaries</a></li>
+              <li><a href="Reports.html">Reports</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        <button class="btn btn-danger"><a class="active text-light text-center" href="login.html" style="margin-right: 30px; font-weight: bold;">Logout</a></button>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Our Team Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Reports</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Team.html">Team</a></li>
+            <li>Reports</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+    <!-- ======= Manage Employees Section ======= -->
+
+<!-- ======= Manage Employees Section ======= -->
+<section class="manage-reports">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="search-bar text-center">
+              <input type="text" placeholder="Search..." onkeyup="searchEmployees()" id="searchInput">
+              <button class="btn btn-primary">Search</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="report-list">
+              <table class="table" id="employeeTable">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Quarterly Sales Report</td>
+                    <td>2023-9-24</td>
+                    <td>Approved</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="viewReport('Quarterly Sales Report','Innovative Tech Solutions reported a strong performance in the third quarter of 2023, with a total sales figure of $5,820,000, representing a significant growth of 12.5% compared to the previous quarter. This growth can be attributed to the successful introduction of new hardware products, increased demand for software solutions, and a gradual expansion of services. Hardware sales led the way, contributing $3,200,000, closely followed by software at $1,800,000, and services at $820,000. The companys domestic market remains the primary source of revenue, but international sales are on the rise. Looking ahead, Innovative Tech Solutions is committed to maintaining its focus on innovation, product development, and global expansion, with a keen eye on customer satisfaction and retention for the upcoming quarter.')">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Annual Budget Report</td>
+                    <td>2023-10-15</td>
+                    <td>Pending Approval</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="viewReport('Annual Budget Report','Visionary Ventures Inc.s annual budget report for 2024 forecasts a robust financial performance, with a projected total revenue of $22,500,000, representing a 10% increase from the previous year, and estimated expenditures of $19,800,000, emphasizing strategic investments in operating costs, research and development, and marketing. The net income projection stands at $2,700,000, indicating a healthy financial outlook. Visionary Ventures Inc. is committed to pursuing innovative product development and market expansion, aiming not only to meet but surpass the budget projections by capitalizing on market opportunities and delivering exceptional customer experiences in the coming year.')">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Quarterly Marketing Report</td>
+                    <td>2023-10-01</td>
+                    <td>Approved</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="viewReport('Quarterly Marketing Report','Innovative Tech Solutions quarterly marketing report for Q3 2023 shows a successful campaign that resulted in a 15% increase in website traffic and a 10% increase in social media engagement. The report highlights the success of the companys targeted advertising strategy, which focused on reaching new audiences through social media and search engine marketing. The report also includes data on the performance of individual campaigns, including email marketing and influencer partnerships. Looking ahead, Innovative Tech Solutions plans to continue investing in digital marketing and exploring new channels to reach potential customers.')">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Quarterly Financial Report</td>
+                    <td>2023-11-01</td>
+                    <td>Pending Approval</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="viewReport('Quarterly Financial Report','Innovative Tech Solutions quarterly financial report for Q4 2023 shows a strong financial performance, with a total revenue of $6,500,000, representing a growth of 10% compared to the previous quarter. The report highlights the success of the companys new product launches and increased demand for software solutions. The report also includes data on the companys expenses, including salaries, marketing, and research and development. Looking ahead, Innovative Tech Solutions plans to continue investing in product development and exploring new markets to drive growth and profitability.')">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Annual Sales Report</td>
+                    <td>2023-12-15</td>
+                    <td>Pending Approval</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="viewReport('Annual Sales Report','Visionary Ventures Inc.s annual sales report for 2023 shows a strong performance, with a total sales figure of $18,500,000, representing a growth of 15% compared to the previous year. The report highlights the success of the companys new product launches and increased demand for software solutions. The report also includes data on the companys sales by region, with the domestic market remaining the primary source of revenue, but international sales showing strong growth. Looking ahead, Visionary Ventures Inc. plans to continue investing in product development and exploring new markets to drive growth and profitability.')">View</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="card text-center" id="report-card" hidden>
+                <div class="card-header">
+                  <h3 id="report-title">Report Title</h3>
+                </div>
+                <div class="card-body">
+                  <p id="report-content">Report Content</p>
+                </div>
+              </div>
+            </div>
+            <div class="add-report">
+              <div class="card" id="addReportFormCard" style="display: none;">
+                <div class="card-header text-center" style="font-weight: bold;">
+                  Add Report
+                </div>
+                <div class="card-body">
+                  <form id="addReportForm">
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="date">Date:</label>
+                      <input type="date" class="form-control" id="date" name="date">
+                    </div>
+                    <div class="form-group">
+                      <label for="status">Status:</label>
+                      <input type="text" class="form-control" id="status" name="status">
+                    </div>
+                    <div class="form-group">
+                      <label for="content">Content:</label>
+                      <textarea class="form-control" id="content" name="content"></textarea>
+                    </div>
+                    <div class="text-center" style="margin-top: 10px;">
+                      <button class="btn btn-success" style="margin: 10px;" type="submit">Save</button>
+                      <button class="btn btn-danger"  style="margin: 10px;" type="button" onclick="hideAddReportForm()">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <button class="btn btn-success" onclick="showAddReportForm()" style="margin-top: 20px;">Add Report</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Manage Employees Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Stay in the loop! Subscribe to our newsletter for the latest HR trends, tips, and updates delivered to your inbox.</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Portofolios Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Employees Managment</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Departments Managment</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Performance analytics</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Easy To Use GUI</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Sheraton Al Matar <br>
+              Cairo, CG 4471312<br>
+              Egypt <br><br>
+              <strong>Phone:</strong> +20 102 333 9461<br>
+              <strong>Email:</strong> E7na_El_Talata@aast.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Our HR Portal</h3>
+            <p>Your all-in-one solution for efficient human resources management. Streamline recruitment, onboarding, and more with our user-friendly tools. Elevate your HR experience today.</p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/weloatef2001" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/walid.atef10" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/Weloatef/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/weloatef/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>E7na El Talata</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+        Designed by <a href="#">E7na El Talata Bardo</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function searchEmployees() {
+      var input, filter, table, tr, td, i, j, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("employeeTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Exclude the first row (table header) from the search
+      for (i = 1; i < tr.length; i++) {
+        var found = false;
+        for (j = 0; j < tr[i].cells.length; j++) {
+          td = tr[i].cells[j];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              found = true;
+              break;
+            }
+          }
+        }
+        if (found) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+    function editRow(btn) {
+      var row = btn.parentNode.parentNode;
+      var id = row.cells[0].innerHTML;
+      var name = row.cells[1].innerHTML;
+      var email = row.cells[2].innerHTML;
+      var department = row.cells[3].innerHTML;
+      var position = row.cells[4].innerHTML;
+      var startDate = row.cells[5].innerHTML;
+
+      row.cells[1].innerHTML = '<input type="text" id="name-input" value="' + name + '">';
+      row.cells[2].innerHTML = '<input type="text" id="email-input" value="' + email + '">';
+      row.cells[3].innerHTML = '<input type="text" id="department-input" value="' + department + '">';
+      row.cells[4].innerHTML = '<input type="text" id="position-input" value="' + position + '">';
+      row.cells[5].innerHTML = '<input type="text" id="startDate-input" value="' + startDate + '">';
+
+      btn.innerHTML = 'Save';
+      btn.onclick = function() {
+        var name = document.getElementById('name-input').value;
+        var email = document.getElementById('email-input').value;
+        var department = document.getElementById('department-input').value;
+        var position = document.getElementById('position-input').value;
+        var startDate = document.getElementById('startDate-input').value;
+
+        row.cells[1].innerHTML = name;
+        row.cells[2].innerHTML = email;
+        row.cells[3].innerHTML = department;
+        row.cells[4].innerHTML = position;
+        row.cells[5].innerHTML = startDate;
+
+        btn.innerHTML = 'Edit';
+        btn.onclick = function() {
+          editRow(btn);
+        };
+      };
+    }
+   //function to view a report from the table
+  function viewReport(name, content) {
+    const reportCard = document.querySelector('#report-card');
+    reportCard.removeAttribute("hidden");
+    const reportTitle = document.querySelector('#report-title');
+    const reportContent = document.querySelector('#report-content');
+
+    reportTitle.textContent = name;
+    reportContent.textContent = content;
+  }
+    function showAddReportForm() {
+      document.getElementById("addReportFormCard").style.display = "block";
+    }
+
+    document.getElementById("addReportForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var table = document.getElementById("employeeTable");
+      var row = table.insertRow(-1);
+      var id = table.rows.length - 1;
+      var name = document.getElementById("name").value;
+      var date = document.getElementById("date").value;
+      var status = document.getElementById("status").value;
+      var content = document.getElementById("content").value;
+
+      row.id = id;
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+
+      cell1.innerHTML = id;
+      cell2.innerHTML = name;
+      cell3.innerHTML = date;
+      cell4.innerHTML = status;
+      cell5.innerHTML = '<button class="btn btn-primary" onclick="viewReport(\'' + name + '\',\'' + content + '\')">View</button>';
+
+      document.getElementById("addReportFormCard").style.display = "none";
+      document.getElementById("addReportForm").reset();
+    });
+
+    function hideAddReportForm() {
+      document.getElementById("addReportFormCard").style.display = "none";
+      document.getElementById("addReportForm").reset();
+    }
+  </script>
+
+</body>
+
+</html>

@@ -52,12 +52,12 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a class="active " href="about.html">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="Jobs.html">Jobs</a></li>
           <li><a href="Departments.html">Departments</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="Team.html">Team</a>
+            <a class="dropdown-toggle active" data-toggle="dropdown" href="Team.html">Team</a>
             <ul class="dropdown-menu">
               <li class="dropdown" data-toggle="dropdown"><a href="#"><span>Employees</span><i class="bi bi-chevron-right"></i></a>
                 <ul class="dropdown-menu">
@@ -82,172 +82,116 @@
 
   <main id="main">
 
-    <!-- ======= About Us Section ======= -->
+    <!-- ======= Our Team Section ======= -->
     <section class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>About Us</h2>
+          <h2>Salaries</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>About Us</li>
+            <li><a href="Team.html">Team</a></li>
+            <li>Salaries</li>
           </ol>
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section><!-- End Our Team Section -->
 
-    <!-- ======= About Section ======= -->
-    <section class="about" data-aos="fade-up">
-      <div class="container">
+    <!-- ======= Manage Employees Section ======= -->
 
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="assets/img/E7na El Talata.png" class="img-fluid" alt="">
+<!-- ======= Manage Employees Section ======= -->
+<section class="manage-employees">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="search-bar text-center">
+              <input type="text" placeholder="Search..." onkeyup="searchEmployees()" id="searchInput">
+              <button class="btn btn-primary">Search</button>
+            </div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>Welcome to E7na El Talata, where we are dedicated to redefining human resources management.</h3>
-            <p class="fst-italic">
-              Our mission is to simplify the complexities of HR, empowering organizations to unlock their full potential through effective talent management.
-            </p>
-            <ul>
-              <li><i class="bi bi-check2-circle"></i> Emphasize your team's expertise and experience in HR solutions.</li>
-              <li><i class="bi bi-check2-circle"></i> Showcase your commitment to innovation in HR technology and practices.</li>
-              <li><i class="bi bi-check2-circle"></i> Highlight your track record of helping clients achieve HR and business success.</li>
-            </ul>
-            <p>
-              It all began with a vision – a vision to revolutionize the HR landscape. Walid Atef, our visionary founder, had a passion for helping businesses thrive by optimizing their most valuable resource: their people. Fueled by this passion, Walid Atef embarked on a journey to create a company that would provide innovative HR solutions.
-            </p>
-            <p>
-              In 2023, E7na El Talata was founded with a vision to revolutionize HR management. Today, we're a leading HR company known for simplifying HR practices and helping businesses optimize their talent management.
-            </p>
+          <div class="card-body">
+            <div class="employee-list">
+              <table class="table" id="employeeTable">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Salary ($)</th>
+                    <th>Commission ($)</th>
+                    <th>Deducted ($)</th>
+                    <th>Total ($)</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>5000</td>
+                    <td>1000</td>
+                    <td>500</td>
+                    <td>5500</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Edit</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>6000</td>
+                    <td>1200</td>
+                    <td>600</td>
+                    <td>6600</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Edit</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Michael Johnson</td>
+                    <td>4500</td>
+                    <td>900</td>
+                    <td>450</td>
+                    <td>4950</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Edit</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Samantha Lee</td>
+                    <td>7000</td>
+                    <td>1400</td>
+                    <td>700</td>
+                    <td>7700</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Edit</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>David Kim</td>
+                    <td>5500</td>
+                    <td>1100</td>
+                    <td>550</td>
+                    <td>6050</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Edit</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <section class="facts section-bg" data-aos="fade-up">
-      <div class="container">
-
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Clients</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hard Workers</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Our Skills Section ======= -->
-    <section class="skills" data-aos="fade-up">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Our Skills</h2>
-          <p>At E7na El Talata, Our skills form the cornerstone of our success. We bring together a team of experts with a diverse skill set, each contributing to our mission of simplifying HR management. Our skills encompass everything from cutting-edge technology and data analytics to industry-specific knowledge. Explore our skills and discover the depth of expertise we bring to every HR challenge.</p>
-        </div>
-
-        <div class="skills-content">
-
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">HTML <i class="val">100%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Tatbeel lel dacatra <i class="val">90%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">3adam salakan <i class="val">75%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">2elet 2adab <i class="val">55%</i></span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Our Skills Section -->
-
-    <!-- ======= Tetstimonials Section ======= -->
-    <section class="testimonials" data-aos="fade-up">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Tetstimonials</h2>
-          <p>Our clients' testimonials speak volumes about the impact we make. Explore what our satisfied customers have to say about their experience with [Your Company Name]. Their words reflect the trust and results we deliver. Discover how we've transformed HR management for organizations just like yours.</p>
-        </div>
-
-        <div class="testimonials-carousel swiper">
-          <div class="swiper-wrapper">
-            <div class="testimonial-item swiper-slide">
-              <img src="assets/img/Welo.jpg" class="testimonial-img" alt="">
-              <h3>Walid Atef</h3>
-              <h4>Ceo &amp; Founder</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                انا حقا احب دكتور اسلام المسئول عن قسم تطوير الشبكات للغاية, هو قدوتي في حياتي بالفعل وبدون مزاح
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="assets/img/abdo Usama.png" class="testimonial-img" alt="">
-              <h3>Abdelrahman Usama</h3>
-              <h4>Designer</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                احس دائما بالفخر والاعتزاز اني اعمل مع دكتور اسلام, اعتبره مثل والدي
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="assets/img/Ezzat.png" class="testimonial-img" alt="">
-              <h3>Omar Ezzat</h3>
-              <h4>Store Owner</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                دكتور اسلام ده حبيبي والله ربنا يمسيه بالخير
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Ttstimonials Section -->
+    </div>
+  </div>
+</section>
+    <!-- Manage Employees Section -->
 
   </main><!-- End #main -->
 
@@ -351,6 +295,63 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function searchEmployees() {
+      var input, filter, table, tr, td, i, j, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("employeeTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Exclude the first row (table header) from the search
+      for (i = 1; i < tr.length; i++) {
+        var found = false;
+        for (j = 0; j < tr[i].cells.length; j++) {
+          td = tr[i].cells[j];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              found = true;
+              break;
+            }
+          }
+        }
+        if (found) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+    function editRow(btn) {
+      var row = btn.parentNode.parentNode;
+      var salary = row.cells[2].innerHTML;
+      var commission = row.cells[3].innerHTML;
+      var deducted = row.cells[4].innerHTML;
+
+      row.cells[2].innerHTML = '<input type="text" id="salary-input" value="' + salary + '">';
+      row.cells[3].innerHTML = '<input type="text" id="commission-input" value="' + commission + '">';
+      row.cells[4].innerHTML = '<input type="text" id="deducted-input" value="' + deducted + '">';
+
+      btn.innerHTML = 'Save';
+      btn.onclick = function() {
+        var salary = document.getElementById('salary-input').value;
+        var commission = document.getElementById('commission-input').value;
+        var deducted = document.getElementById('deducted-input').value;
+        var total = parseFloat(salary) + parseFloat(commission) - parseFloat(deducted);
+
+        row.cells[2].innerHTML = salary;
+        row.cells[3].innerHTML = commission;
+        row.cells[4].innerHTML = deducted;
+        row.cells[5].innerHTML = total.toFixed(2);
+
+        btn.innerHTML = 'Edit';
+        btn.onclick = function() {
+          editRow(btn);
+        };
+      };
+    }
+  </script>
 
 </body>
 
